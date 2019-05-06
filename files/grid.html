@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>No Grid Table with fixed header, footer and left column</title>  
+  <style>
+   /* default styling. Nothing to do with freexing first row and column */
+
+  :root {font-size: 225%; font-family: monospace;}
+main {display: flex;}
+main > * {border: 1px solid;}
+table {border-collapse: collapse; font-family: helvetica}
+td, th {border:  1px solid;
+      padding: 10px;
+      min-width: 200px;
+      background: white;
+      box-sizing: border-box;
+      text-align: left;
+}
+.table-container {
+  position: relative;
+  max-height:  80vh;
+  width: 90vw;
+  overflow: scroll;
+}
+
+thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: hsl(20, 50%, 70%);
+}
+
+thead th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+tfoot {
+  position: -webkit-sticky;
+  bottom: 0;
+  z-index: 2;
+}
+
+tfoot td {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  background: hsl(20, 50%, 70%);
+}
+
+tfoot td:first-child {
+  z-index: 3;
+}
+
+tbody {
+  overflow: scroll;
+  height: 200px;
+}
+
+/* MAKE LEFT COLUMN FIXEZ */
+tr > :first-child {
+  position: -webkit-sticky;
+  position: sticky; 
+  background: hsl(180, 50%, 70%);
+  left: 0; 
+}
+/* don't do this */
+tr > :first-child {
+  box-shadow: inset 0px 1px black;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+  <div class="table-container">
+  <div class="table-horizontal-container">
+    <table class="unfixed-table">
+      <thead>
+        <tr><th>Header</th><th>Header</th><th>Header</th><th>Header</th><th>Header</th><th>Header</th><th>Header</th><th>Header</th></tr>
+      </thead>
+      <tbody>
+        <tr><th>Column one</th><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><th>Column one</th><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column one</td><td>Column two</td><td>Column three</td><td>Column four</td><td>Column five</td><td>Column six</td><td>Column seven</td><td>Column eight</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+
+        <tr><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td><td>Column</td></tr>
+      </tbody>
+      
+      <tfoot>
+        <tr><td>Footer1</td><td>Footer2</td><td>Footer3</td><td>Footer4</td><td>Footer5</td><td>Footer6</td><td>Footer7</td><td>Footer8</td></tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+</body>
+</html>

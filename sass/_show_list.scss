@@ -1,0 +1,48 @@
+  ul.bulleted {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    li {
+    	text-align: left;
+    	&::before {
+     	  content: "▷ ";
+     	}
+    }
+}
+
+.bulleted.second{
+    position: relative;
+    right: -8vw;
+    align-items: flex-end;
+    li {
+      text-align: right;
+      &::before {
+        content: none;
+      }
+      &::after {
+        content: "▷ ";
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+ul.bulleted li.nope {
+  padding: 0 3px;
+  outline: solid 3px magenta;
+  &::before, &::after {
+    content: none;
+  }
+}
+.temphidden {
+	visibility: hidden;
+}
+dt::before {
+        content: "♦ ";
+}
+dd {
+  opacity: 0.6;
+  margin-left: 1em;
+  font-size: 0.9em;
+}

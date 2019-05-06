@@ -1,0 +1,28 @@
+  .intro .foo {
+    color: magenta;
+  }
+  .foo.bar {
+    position: relative; height: 0.9em;
+  }
+  .foo.bar span {
+    position: absolute;
+    top: 0; left: 0; width: 100%; text-align: center;
+    background-color: $bg;
+  }
+  .intro em.foo {
+    display: inline-block;
+    width: 2.2em;
+  }
+  .intro .myname {
+     text-align: left; 
+     margin-bottom: 4vh;
+  }
+  .intro.halved.current {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    flex-flow: column;
+  }
+  .books img {
+    max-width: 13vw;
+  }

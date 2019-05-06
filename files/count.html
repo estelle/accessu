@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Flex Items: flex-direction: row;</title>  <style>
+    body {padding: 100px;background-color: rgba(255,255,255,0.9); font-family: monospace;}
+    * {}
+div {background-color: rgba(255,255,255,0.9)}
+article {position: relative; border: 1px solid red;}
+
+
+span {
+  position: relative; left: -10px;
+  top: 70px;
+  max-width: 1px;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+[class^=row] span {
+  transform: rotate(-90deg);
+  left: 25px;
+}
+[class^=row] span:last-of-type {}
+
+article > div {
+  display: inline-flex;
+  border: 1px dashed;
+  padding: 10px;
+}
+div > div {
+  border: 1px solid;
+  height: 50px;
+  margin: 10px;
+  line-height: 50px;
+  flex: 1 1 auto;
+  min-height: 100px;
+}
+body {
+  font-size: 25px;
+  text-align: center;
+}
+span {color: blue;}
+p {margin-top: 0;}
+
+
+
+
+[class^="col"] span {
+  position: relative;
+  left: 300px;
+  top: -34px;
+  max-width: 1px;
+  overflow: visible;
+  white-space: nowrap;
+}
+.row {
+  flex-direction: row;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.row-reverse::before {
+
+}
+.row-reverse::after {
+  right: 0;
+  text-indent: 90%;
+  left: auto;
+}
+
+</style>
+</head>
+<body>
+<article style="margin-bottom: 100px;">
+<div class="row">
+  <span>⬉ main-start</span>
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
+  <div>D</div>
+  <div>E</div>
+  <span style="left: 60px;">main-end</span>
+</div>
+<p>flex-direction: row; ⤴</p>
+</article>
+<article>
+<div class="row-reverse">
+  <span style="left: 60px;">main-start</span>
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
+  <div>D</div>
+  <div>E</div>
+  <span>main-end</span>
+</div>
+<p>flex-direction: row-reverse; ⤴</p>
+</article>
+<article style="width: 45%; float: left">
+<div class="column" style="flex-direction: column;">
+  <span>main-start</span>
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
+  <div>D</div>
+  <div>E</div>
+  <span style="top: 15px;">main-end</span>
+</div>
+<p>flex-direction: column; ⤴</p>
+</article><article style="width: 45%; float: right">
+<div class="column-reverse" style="flex-direction:  column-reverse;">
+  <span style="top: 15px;">main-start</span>
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
+  <div>D</div>
+  <div>E</div>
+  <span>main-end</span>
+</div>
+<p>flex-direction: column-reverse; ⤴</p>
+</article>
+</body>
+</html>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import "vars";
+@import "fonts";
+@import "buttons";
+@import "slide";
+@import "slides";
+@import "content";
+@import "arrow";
+@import "object";
+@import "tweet";
+@import "table";
+@import "print";
+@import "show_list";
+@import "intro";
+
+  .dollar {
+    transform: rotate(-20deg);
+    font-size: 17vh;
+    opacity: 0.5;
+    display: inline-block;
+    font-family: fantasy;
+  }
+  .dollar:nth-of-type(2n-1) {
+    transform: rotate(20deg);
+  }
+  .dollar:nth-of-type(3n-2) {
+    transform: rotate(0deg) translatey(-4vh);
+  }
+  .dollar:nth-of-type(5n) {
+    transform: rotate(10deg) translatey(8vh);
+  }
+  .dollar:nth-of-type(7n) {
+    transform: rotate(-10 deg) translatey(-8vh);
+  }
+
+  .bulleted.second{
+    align-items: flex-end;
+  }
+
+.tldr li {
+  font-size: 6vh;
+}
+.tldr li em {
+  display: inline-block;
+  font-size: 1.25em;
+  color: magenta;
+}
+video {
+    width: calc(45vw - 100px);
+    min-width: 260px;
+}
+.flex {
+  display: flex;
+  list-style-type: none;
+}
+.takeSpace {
+  height: calc(100vh - 6em);
+}
+.notTheSame {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+.notTheSame h2 {
+  text-align: center;
+  padding: 0 20px;
+  font-size: 2rem;
+}
+.list-of-images ul, 
+.list-of-images ol {
+    display: flex;
+    list-style-type: none;
+    align-content: flex-start;
+    margin: 0;
+}
+.list-of-images li {
+    min-width: 13vw;
+    flex: 0 0 150px;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 1;
+}
+.list-of-images ol li {
+    font-size: 1rem;
+}
+.callout {
+  color: red; 
+  border: 1px solid; 
+  border-radius: 5px; 
+  padding: 5px 20px;
+  position: absolute; 
+  top: 50%; 
+  left: 30%; 
+  transform: rotate(-30deg);
+}
+.future twitterwidget,
+.past  twitterwidget,
+.future iframe,
+.past iframe {
+  opacity: 0;
+}
+.cloudfour {
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+}
+.cloudfour img {
+    text-align: center;
+    margin: 0 10px 0 0;
+    border: 1px solid;
+    padding: 20px 20px 0 0;
+    background-color: #226DAA;
+  }
+.cloudfour pre {
+  letter-spacing: -5px;
+}
+ul.large > li:first-line,
+ol.large > li:first-line {
+  font-size: 1.5em;
+}
