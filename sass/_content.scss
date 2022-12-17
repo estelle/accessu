@@ -29,13 +29,6 @@ a{
   }
 }
 pre {
-  text-align: left;
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  background: rgba(255,255,255, 0.5);
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  border: 1px solid white;
   b, strong {
     font-weight: strong;
     color: #FFA500;
@@ -84,7 +77,7 @@ ol {
 .slide[style*="url("]:not(.invert) {
   .entireul, 
   li {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.51);
       padding-right: 0.2em;
   }
   .entireul li {
@@ -107,4 +100,45 @@ ol {
 }
 .solid.solid.solid {
   background: black;
+}
+
+
+.shiny:nth-of-type(7n+1) .shiney {
+  color: #f90f0f; /* red */
+}
+.shiny:nth-of-type(7n+2) .shiney {
+  color: #fc8c00; /* orange */
+}
+.shiny:nth-of-type(7n+3) .shiney {
+  color: #ffef00; /* yellow */
+}
+.shiny:nth-of-type(7n+4) .shiney {
+  color: #19af3d; /* green */
+}
+.shiny:nth-of-type(7n+5) .shiney {
+  color: #3b6ef9; /* blue */
+}
+.shiny:nth-of-type(7n+6) .shiney {
+  color: #b033fd; /* purple */
+}
+.shiny:nth-of-type(7n) .shiney {
+  color: #f716e6; /* fushia */
+}
+.alt {
+  text-shadow: none;
+}
+.a11ybox {
+  padding: 1em;
+  background-color: rgba(0,0,0,0.5);
+  margin-left: 10vw;
+  float: left;
+  width: 6em;
+  text-align: center;
+}
+.superhugetext {
+  font-size: calc((8vh + 8vw) / 2);
+}
+
+.hugetext {
+  font-size: calc((6.5vh + 6.5vw) / 2);
 }

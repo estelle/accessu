@@ -20,7 +20,7 @@ body,
   background: $bg;
 }
 .slide {
-  background-image: linear-gradient(to bottom, #ffffff00, #ffffff99);
+  background-image: linear-gradient(to bottom, #ffffff00, 80%, #ffffff99);
   background-image: conic-gradient(from 0deg at -5% 100%, $bg, lighten($bg, 20%) 180deg);
 }
 
@@ -100,7 +100,7 @@ pre {
   text-align: left;
   font-size: 1.5rem;
   padding: 10px 20px;
-  background: rgba(255,255,255, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   border: 1px solid white;
 }

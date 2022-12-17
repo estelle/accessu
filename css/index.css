@@ -557,7 +557,7 @@ ol {
   font-size: 0.8rem;
 }
 
-.TWEET blockquote {
+.TOOT blockquote {
   background-color: white;
   width: 80vw;
   margin: auto;
@@ -569,24 +569,24 @@ ol {
   align-items: flex-start;
   font-size: 1.2rem;
 }
-.TWEET blockquote > a > img {
+.TOOT blockquote > a > img {
   border-radius: 50%;
   float: left;
   height: 2em;
 }
-.TWEET blockquote div > a span:first-of-type {
+.TOOT blockquote div > a span:first-of-type {
   font-size: 1rem;
   color: #14171a;
   font-weight: 700;
 }
-.TWEET blockquote div > a span:last-of-type {
+.TOOT blockquote div > a span:last-of-type {
   font-size: 0.8rem;
   color: black;
 }
-.TWEET blockquote div > p {
+.TOOT blockquote div > p {
   font-size: 1.2rem;
 }
-.TWEET blockquote div .date {
+.TOOT blockquote div .date {
   color: #657786;
   font-size: 0.8rem;
   text-shadow: none;
@@ -594,7 +594,7 @@ ol {
   margin-top: 0.5em;
 }
 
-.tweet blockquote {
+.toot blockquote {
   font-size: calc((6vh + 6vw) / 2);
 }
 
@@ -827,8 +827,8 @@ video {
   transform: rotate(-30deg);
 }
 
-.future twitterwidget,
-.past twitterwidget,
+.future socialmedia,
+.past socialmedia,
 .future iframe,
 .past iframe {
   opacity: 0;

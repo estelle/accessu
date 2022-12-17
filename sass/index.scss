@@ -7,7 +7,7 @@
 @import "content";
 @import "arrow";
 @import "object";
-@import "tweet";
+@import "toot";
 @import "table";
 @import "print";
 @import "show_list";
@@ -93,8 +93,8 @@ video {
   left: 30%; 
   transform: rotate(-30deg);
 }
-.future twitterwidget,
-.past  twitterwidget,
+.future socialmedia,
+.past  socialmedia,
 .future iframe,
 .past iframe {
   opacity: 0;
